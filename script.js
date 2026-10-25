@@ -19,7 +19,8 @@ if (trackForm && trackFeedback) {
     const code = document.getElementById("report-code")?.value.trim();
     trackFeedback.hidden = false;
     trackFeedback.textContent = code
-      ? "Pratinjau UI: fitur pelacakan belum terhubung ke sistem. Kode belum diperiksa: " + code
+      ? "Pratinjau UI: fitur pelacakan belum terhubung ke sistem. Kode belum diperiksa: " +
+        code
       : "Masukkan kode laporan terlebih dahulu.";
   });
 }

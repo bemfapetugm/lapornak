@@ -1786,7 +1786,9 @@ main {
 }
 
 @media (max-width: 760px) {
-  .brand { transform: none; }
+  .brand {
+    transform: none;
+  }
 
   .hero {
     min-height: 0;
