@@ -1,0 +1,712 @@
+<!doctype html>
+
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="#FFFFFF" name="theme-color" />
+    <meta
+      content="LAPORNAK — Pusat Laporan Mahasiswa Peternakan, BEM Fakultas Peternakan UGM."
+      name="description"
+    />
+    <title>LAPORNAK — Pusat Laporan Mahasiswa Peternakan</title>
+    <link rel="icon" type="image/svg+xml" href="assets/fav-icon.svg" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a aria-label="LAPORNAK Beranda" class="brand" href="#beranda">
+        <img
+          class="brand-banner"
+          src="assets/profile-header.svg"
+          alt="LAPORNAK — Pusat Laporan Mahasiswa Peternakan"
+        />
+      </a>
+      <nav aria-label="Navigasi utama" class="main-nav">
+        <a href="aduan/">Buat Laporan</a>
+        <a href="#jelajahi">Jelajahi Aduan</a>
+        <a href="#tentang">Tentang</a>
+      </nav>
+      <div class="header-actions">
+        <button
+          aria-label="Pengaturan tampilan (belum aktif)"
+          class="icon-button"
+          title="Pengaturan tampilan belum aktif"
+          type="button"
+        >
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <circle cx="12" cy="12" r="3.5"></circle>
+            <path
+              d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l-1.42 1.42M17.65 6.35l1.42-1.42"
+            ></path>
+          </svg>
+        </button>
+        <a
+          aria-label="Masuk (fitur login belum aktif)"
+          class="login-button"
+          href="#kontak"
+        >
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <path
+              d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
+              fill="currentColor"
+              stroke="none"
+            ></path>
+            <path
+              d="M4.5 20a7.5 7.5 0 0 1 15 0Z"
+              fill="currentColor"
+              stroke="none"
+            ></path>
+          </svg>
+          Masuk
+        </a>
+      </div>
+      <button
+        aria-expanded="false"
+        aria-label="Buka menu navigasi"
+        class="mobile-menu"
+        id="mobile-menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+    <main id="beranda">
+      <section class="hero">
+        <div aria-hidden="true" class="hero-decoration decoration-left"></div>
+        <div aria-hidden="true" class="hero-decoration decoration-right"></div>
+        <div class="hero-copy">
+          <h1>LAPORNAK</h1>
+          <h2>Pusat Laporan Mahasiswa Peternakan</h2>
+          <p>
+            Ruang aman untuk menyampaikan permasalahan, saran, dan aspirasi di
+            lingkungan Fakultas Peternakan UGM.
+          </p>
+          <div class="hero-points">
+            <span>
+              <i aria-hidden="true" class="point-icon">
+                <svg viewbox="0 0 24 24">
+                  <path
+                    d="M12 3 19 6v5c0 4.7-3 7.8-7 10-4-2.2-7-5.3-7-10V6l7-3Z"
+                  ></path>
+                  <path d="m8.5 12 2.2 2.2 4.8-5"></path>
+                </svg>
+              </i>
+              Aman dan terarah
+            </span>
+            <span>
+              <i aria-hidden="true" class="point-icon">
+                <svg viewbox="0 0 24 24">
+                  <circle cx="9" cy="8" r="3"></circle>
+                  <path
+                    d="M3.5 19v-1.2A4.8 4.8 0 0 1 8.3 13h1.4a4.8 4.8 0 0 1 4.8 4.8V19Z"
+                  ></path>
+                  <path
+                    d="M16 5.5a3 3 0 0 1 0 5.8M17 13.5a4.7 4.7 0 0 1 3.5 4.5V19h-3"
+                  ></path>
+                </svg>
+              </i>
+              Privasi diperhatikan
+            </span>
+            <span>
+              <i aria-hidden="true" class="point-icon">
+                <svg viewbox="0 0 24 24">
+                  <path d="M7 3.5h7l4 4V21H7Z"></path>
+                  <path d="M14 3.5v4h4M10 12h5M10 15.5h5"></path>
+                </svg>
+              </i>
+              Tindak lanjut jelas
+            </span>
+          </div>
+        </div>
+      </section>
+      <section class="track-panel" id="aduanku">
+        <div aria-hidden="true" class="track-icon-large">
+          <svg viewbox="0 0 24 24">
+            <circle cx="10.5" cy="10.5" r="6.5"></circle>
+            <path d="m15.5 15.5 5 5"></path>
+          </svg>
+        </div>
+        <div class="track-heading">
+          <h2>Lacak Laporan</h2>
+          <p>Sudah pernah membuat laporan? Cek kode laporan di sini.</p>
+        </div>
+        <form class="track-form" id="track-form">
+          <label class="sr-only" for="report-code">Kode laporan</label>
+          <span aria-hidden="true" class="search-symbol">
+            <svg viewbox="0 0 24 24">
+              <circle cx="10.8" cy="10.8" r="6.5"></circle>
+              <path d="m16 16 5 5"></path>
+            </svg>
+          </span>
+          <input
+            autocomplete="off"
+            id="report-code"
+            name="report-code"
+            placeholder="Contoh: LPNK-2026-00001"
+            type="text"
+          />
+          <button class="primary-button" type="submit">
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+              <circle cx="10.8" cy="10.8" r="6.5"></circle>
+              <path d="m16 16 5 5"></path>
+            </svg>
+            Lacak Laporan
+          </button>
+        </form>
+        <p
+          class="form-feedback"
+          hidden=""
+          id="track-feedback"
+          role="status"
+        ></p>
+      </section>
+      <section aria-label="Pintasan layanan" class="quick-links">
+        <a class="quick-card" href="#buat-laporan">
+          <span class="quick-icon"
+            ><svg viewbox="0 0 24 24">
+              <path d="M7 3h7l5 5v13H7z"></path>
+              <path d="M14 3v6h5M10 13h6M10 17h6"></path></svg
+          ></span>
+          <span class="quick-content"
+            ><strong>Buat Laporan</strong
+            ><small
+              >Sampaikan permasalahan, saran, atau aspirasi di lingkungan
+              mahasiswa Peternakan.</small
+            ></span
+          >
+          <span class="arrow-circle">↗</span>
+        </a>
+        <a class="quick-card" href="#aduanku">
+          <span class="quick-icon"
+            ><svg viewbox="0 0 24 24">
+              <circle cx="10.5" cy="10.5" r="6.5"></circle>
+              <path d="m16 16 5 5"></path></svg
+          ></span>
+          <span class="quick-content"
+            ><strong>Lacak Laporan</strong
+            ><small
+              >Pantau perkembangan laporan menggunakan kode laporan.</small
+            ></span
+          >
+          <span class="arrow-circle">↗</span>
+        </a>
+        <a class="quick-card" href="#alur">
+          <span class="quick-icon"
+            ><svg viewbox="0 0 24 24">
+              <path
+                d="M3 5.5c3-1.5 6-1 9 1v14c-3-2-6-2.5-9-1zM21 5.5c-3-1.5-6-1-9 1v14c3-2 6-2.5 9-1z"
+              ></path></svg
+          ></span>
+          <span class="quick-content"
+            ><strong>Pelajari Alur</strong
+            ><small
+              >Pahami tahapan proses pelaporan hingga tindak lanjut.</small
+            ></span
+          >
+          <span class="arrow-circle">↗</span>
+        </a>
+        <a class="quick-card" href="#tentang">
+          <span class="quick-icon"
+            ><svg viewbox="0 0 24 24">
+              <circle cx="12" cy="12" r="9"></circle>
+              <path d="M12 11v5M12 7.5h.01"></path></svg
+          ></span>
+          <span class="quick-content"
+            ><strong>Tentang LAPORNAK</strong
+            ><small
+              >Kenali tujuan, ketentuan, dan informasi penting lainnya.</small
+            ></span
+          >
+          <span class="arrow-circle">↗</span>
+        </a>
+      </section>
+      <section class="mission-banner" id="buat-laporan">
+        <div class="mission-copy">
+          <span class="eyebrow">LAYANAN LAPORNAK</span>
+          <h2>Suaramu berarti<br />untuk lingkungan yang lebih baik.</h2>
+          <p>
+            Bersama menciptakan Fakultas Peternakan yang aman, nyaman, dan
+            mendukung perkembangan mahasiswa.
+          </p>
+          <a class="primary-button button-link" href="#aduanku">
+            Buat Laporan Sekarang
+            <svg
+              aria-hidden="true"
+              class="mission-button-arrow"
+              viewbox="0 0 24 24"
+            >
+              <path d="M4 12h15M13 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+        <div aria-label="Prinsip layanan LAPORNAK" class="mission-benefits">
+          <article class="benefit-card">
+            <span aria-hidden="true" class="benefit-icon">
+              <svg viewbox="0 0 24 24">
+                <circle cx="12" cy="7.5" r="3.2"></circle>
+                <path d="M5 20v-1.3a6.9 6.9 0 0 1 13.8 0V20Z"></path>
+              </svg>
+            </span>
+            <h3>Identitas<br />opsional</h3>
+            <span aria-hidden="true" class="benefit-rule"></span>
+            <p>
+              Kamu dapat menyampaikan laporan tanpa harus mencantumkan identitas
+              diri.
+            </p>
+          </article>
+          <article class="benefit-card">
+            <span aria-hidden="true" class="benefit-icon">
+              <svg viewbox="0 0 24 24">
+                <path
+                  d="m12 2.8 7 3v5.1c0 4.5-2.8 7.8-7 10.3-4.2-2.5-7-5.8-7-10.3V5.8Z"
+                ></path>
+                <path d="m8.7 11.8 2.2 2.2 4.5-4.7"></path>
+              </svg>
+            </span>
+            <h3>Dikelola sesuai<br />kewenangan</h3>
+            <span aria-hidden="true" class="benefit-rule"></span>
+            <p>
+              Laporan diproses oleh pihak yang berwenang sesuai jenis dan
+              kewenangannya.
+            </p>
+          </article>
+          <article class="benefit-card">
+            <span aria-hidden="true" class="benefit-icon">
+              <svg viewbox="0 0 24 24">
+                <path d="M6 3.5h12v17H6z"></path>
+                <path d="M9 8h6M9 11.5h6M9 15h6"></path>
+              </svg>
+            </span>
+            <h3>Proses<br />terstruktur</h3>
+            <span aria-hidden="true" class="benefit-rule"></span>
+            <p>
+              Setiap laporan diproses secara jelas, transparan, dan dapat
+              dipantau.
+            </p>
+          </article>
+        </div>
+        <svg
+          aria-hidden="true"
+          class="mission-leaves mission-leaves-left"
+          viewbox="0 0 180 150"
+        >
+          <path d="M-10 133C35 102 65 91 111 103c22 6 39 20 69 41"></path>
+          <path d="M28 130C15 106 14 82 28 53c21 21 25 45 0 77Z"></path>
+          <path d="M48 124C48 96 65 73 94 60c3 29-12 52-46 64Z"></path>
+          <path d="M72 133C81 111 103 99 132 99c-10 24-29 37-60 34Z"></path>
+        </svg>
+        <svg
+          aria-hidden="true"
+          class="mission-leaves mission-leaves-right"
+          viewbox="0 0 180 150"
+        >
+          <path d="M8 146c45-26 54-64 69-94 13-25 32-35 62-43"></path>
+          <path d="M67 101c-4-25 7-46 30-64 9 27-1 48-30 64Z"></path>
+          <path d="M89 76c8-26 29-41 58-47-3 29-22 45-58 47Z"></path>
+          <path d="M44 132c-1-23-16-40-39-53 0 28 13 45 39 53Z"></path>
+        </svg>
+      </section>
+      <section class="support-section" id="tentang">
+        <div class="channels-panel">
+          <div class="section-heading">
+            <h2>Kanal Laporan Lainnya</h2>
+            <p>
+              Selain melalui website, kamu dapat menyampaikan laporan melalui
+              kanal resmi yang tersedia.
+            </p>
+          </div>
+          <div class="channel-grid">
+            <a
+              aria-label="Instagram LAPORNAK, tautan kontak perlu dikonfigurasi"
+              class="channel-card"
+              href="#kontak"
+              ><span aria-hidden="true" class="channel-icon instagram"
+                ><svg viewbox="0 0 24 24">
+                  <rect height="17" rx="5" width="17" x="3.5" y="3.5"></rect>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <circle
+                    class="icon-fill"
+                    cx="17.6"
+                    cy="6.6"
+                    r=".8"
+                  ></circle></svg></span
+              ><span
+                ><strong>Instagram</strong><small>@lapornak.fapet</small></span
+              ></a
+            >
+            <a
+              aria-label="WhatsApp resmi, tautan kontak perlu dikonfigurasi"
+              class="channel-card"
+              href="#kontak"
+              ><span aria-hidden="true" class="channel-icon whatsapp"
+                ><svg viewbox="0 0 24 24">
+                  <path
+                    d="M20.2 11.7a8.1 8.1 0 0 1-11.9 7.1L3.5 20l1.3-4.5a8.1 8.1 0 1 1 15.4-3.8Z"
+                  ></path>
+                  <path
+                    d="M8.7 8.1c.2-.5.4-.5.7-.5h.5c.2 0 .4.1.5.4l.7 1.6c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4 0 .7.6 1 1.4 1.7 2.5 2.2.3.1.5.1.7-.1l.8-.9c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.5 0 .4-.2 1.2-.7 1.5-.5.4-1.1.6-1.8.4-1-.2-2.3-.8-3.7-2-1.2-1.1-2-2.5-2.2-3.4-.2-.8.1-1.5.6-2.2Z"
+                  ></path></svg></span
+              ><span
+                ><strong>WhatsApp</strong><small>Kontak resmi BEM</small></span
+              ></a
+            >
+            <a
+              aria-label="Email resmi, alamat perlu dikonfigurasi"
+              class="channel-card"
+              href="#kontak"
+              ><span aria-hidden="true" class="channel-icon email"
+                ><svg viewbox="0 0 24 24">
+                  <rect height="14" rx="2" width="18" x="3" y="5"></rect>
+                  <path d="m4 7 8 6 8-6"></path></svg></span
+              ><span
+                ><strong>Email</strong><small>Alamat email resmi</small></span
+              ></a
+            >
+            <a class="channel-card" href="#kontak"
+              ><span aria-hidden="true" class="channel-icon location"
+                ><svg viewbox="0 0 24 24">
+                  <path
+                    d="M20 10.2c0 5.2-8 11-8 11s-8-5.8-8-11a8 8 0 1 1 16 0Z"
+                  ></path>
+                  <circle cx="12" cy="10" r="2.5"></circle></svg></span
+              ><span
+                ><strong>Sekretariat BEM</strong
+                ><small>Fakultas Peternakan UGM</small></span
+              ></a
+            >
+          </div>
+        </div>
+        <div class="guide-panel" id="alur">
+          <div class="guide-copy">
+            <span class="quick-icon guide-icon"
+              ><svg viewbox="0 0 24 24">
+                <path d="M7 3h7l5 5v13H7z"></path>
+                <path d="M14 3v6h5M10 13h6M10 17h6"></path></svg
+            ></span>
+            <h2>Unduh Panduan</h2>
+            <p>
+              Pelajari cara membuat laporan, ketentuan, dan alur penanganannya.
+            </p>
+            <a class="outline-button" href="#alur"
+              >Lihat Panduan <span>→</span></a
+            >
+          </div>
+          <div aria-hidden="true" class="guide-art">
+            <span class="guide-document"
+              ><svg viewbox="0 0 48 64">
+                <path d="M10 3h19l10 10v48H10z"></path>
+                <path
+                  d="M29 3v11h10M16 25h16M16 33h16M16 41h16M16 49h12"
+                ></path></svg
+            ></span>
+            <i></i><b></b>
+          </div>
+        </div>
+      </section>
+      <section class="latest-section" id="jelajahi">
+        <div class="latest-heading">
+          <div>
+            <h2>Aduan Terbaru</h2>
+            <p>
+              Pratinjau tampilan laporan publik. Data contoh, bukan laporan
+              nyata.
+            </p>
+          </div>
+          <a class="outline-button compact" href="#jelajahi"
+            >Lihat Semua <span>→</span></a
+          >
+        </div>
+        <div class="report-grid">
+          <article class="report-card">
+            <div class="report-image campus-photo photo-one">
+              <span class="sample-label">Ilustrasi contoh</span>
+            </div>
+            <div class="report-body">
+              <time>3 hari lalu</time>
+              <h3>Perbaikan Fasilitas Kelas</h3>
+              <p>
+                Beberapa fasilitas kelas memerlukan perbaikan agar kegiatan
+                belajar berlangsung lebih nyaman.
+              </p>
+              <div class="report-meta">
+                <span class="report-category"
+                  ><svg aria-hidden="true" viewbox="0 0 24 24">
+                    <path
+                      d="M3 21h18M5 21V9h14v12M3 9l9-6 9 6M9 12v5M15 12v5"
+                    ></path></svg
+                  >Fasilitas</span
+                >
+                <span class="status status-done">Selesai</span>
+              </div>
+            </div>
+          </article>
+          <article class="report-card">
+            <div class="report-image campus-photo photo-two">
+              <span class="sample-label">Ilustrasi contoh</span>
+            </div>
+            <div class="report-body">
+              <time>5 hari lalu</time>
+              <h3>Penerangan Jalan Kampus</h3>
+              <p>
+                Penerangan di beberapa titik kampus perlu diperiksa untuk
+                mendukung kenyamanan saat beraktivitas.
+              </p>
+              <div class="report-meta">
+                <span class="report-category"
+                  ><svg aria-hidden="true" viewbox="0 0 24 24">
+                    <path
+                      d="M3 21h18M5 21V9h14v12M3 9l9-6 9 6M9 12v5M15 12v5"
+                    ></path></svg
+                  >Sarana Prasarana</span
+                >
+                <span class="status status-progress">Diproses</span>
+              </div>
+            </div>
+          </article>
+          <article class="report-card">
+            <div class="report-image campus-photo photo-three">
+              <span class="sample-label">Ilustrasi contoh</span>
+            </div>
+            <div class="report-body">
+              <time>1 minggu lalu</time>
+              <h3>Kebersihan Area Kantin</h3>
+              <p>
+                Kebersihan area kantin menjadi perhatian agar lingkungan makan
+                tetap nyaman bagi mahasiswa.
+              </p>
+              <div class="report-meta">
+                <span class="report-category"
+                  ><svg aria-hidden="true" viewbox="0 0 24 24">
+                    <path
+                      d="M3 21h18M5 21V9h14v12M3 9l9-6 9 6M9 12v5M15 12v5"
+                    ></path></svg
+                  >Kebersihan</span
+                >
+                <span class="status status-progress">Diproses</span>
+              </div>
+            </div>
+          </article>
+          <article class="report-card">
+            <div class="report-image campus-photo photo-one">
+              <span class="sample-label">Ilustrasi contoh</span>
+            </div>
+            <div class="report-body">
+              <time>2 minggu lalu</time>
+              <h3>Perbaikan Toilet Fakultas</h3>
+              <p>
+                Kondisi toilet perlu diperiksa dan diperbaiki agar dapat
+                digunakan dengan nyaman.
+              </p>
+              <div class="report-meta">
+                <span class="report-category"
+                  ><svg aria-hidden="true" viewBox="0 0 24 24">
+                    <path
+                      d="M3 21h18M5 21V9h14v12M3 9l9-6 9 6M9 12v5M15 12v5"
+                    ></path></svg
+                  >Fasilitas</span
+                ><span class="status status-progress">Diproses</span>
+              </div>
+            </div>
+          </article>
+          <article class="report-card">
+            <div class="report-image campus-photo photo-two">
+              <span class="sample-label">Ilustrasi contoh</span>
+            </div>
+            <div class="report-body">
+              <time>2 minggu lalu</time>
+              <h3>Tempat Sampah Area Kampus</h3>
+              <p>
+                Penambahan tempat sampah di beberapa titik kampus diharapkan
+                menjaga kebersihan lingkungan.
+              </p>
+              <div class="report-meta">
+                <span class="report-category"
+                  ><svg aria-hidden="true" viewBox="0 0 24 24">
+                    <path
+                      d="M3 21h18M5 21V9h14v12M3 9l9-6 9 6M9 12v5M15 12v5"
+                    ></path></svg
+                  >Kebersihan</span
+                ><span class="status status-progress">Ditindaklanjuti</span>
+              </div>
+            </div>
+          </article>
+          <article class="report-card">
+            <div class="report-image campus-photo photo-three">
+              <span class="sample-label">Ilustrasi contoh</span>
+            </div>
+            <div class="report-body">
+              <time>3 minggu lalu</time>
+              <h3>Area Parkir Mahasiswa</h3>
+              <p>
+                Penataan area parkir diperlukan agar kendaraan mahasiswa lebih
+                tertib dan akses tetap lancar.
+              </p>
+              <div class="report-meta">
+                <span class="report-category"
+                  ><svg aria-hidden="true" viewBox="0 0 24 24">
+                    <path
+                      d="M3 21h18M5 21V9h14v12M3 9l9-6 9 6M9 12v5M15 12v5"
+                    ></path></svg
+                  >Sarana Prasarana</span
+                ><span class="status status-done">Selesai</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="privacy-note">
+          Contoh kartu di atas hanya untuk rancangan UI, bukan laporan nyata.
+          Laporan sensitif dan identitas pelapor tidak ditampilkan secara
+          publik.
+        </p>
+      </section>
+    </main>
+    <footer class="site-footer" id="kontak">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a
+            class="brand footer-logo"
+            href="#beranda"
+            aria-label="LAPORNAK Beranda"
+          >
+            <span aria-hidden="true" class="brand-symbol">
+              <svg viewBox="0 0 48 48">
+                <path
+                  d="M23 39V23"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="2.6"
+                ></path>
+                <path
+                  d="M23 28C10 27 7 18 8 10c11 0 18 6 15 18Z"
+                  fill="currentColor"
+                ></path>
+                <path
+                  d="M23 21C24 9 32 5 42 6c-1 11-7 18-19 19Z"
+                  fill="currentColor"
+                  opacity=".72"
+                ></path>
+                <path
+                  d="M15 39h17"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-width="2.6"
+                ></path>
+              </svg>
+            </span>
+            <span class="brand-copy"
+              ><strong>LAPORNAK</strong
+              ><small>Pusat Laporan Mahasiswa Peternakan</small></span
+            >
+          </a>
+          <p class="footer-description">
+            Layanan pelaporan mahasiswa<br class="desktop-break" />
+            BEM Fakultas Peternakan UGM untuk lingkungan kampus yang lebih baik.
+          </p>
+          <div class="footer-socials" aria-label="Media sosial LAPORNAK">
+            <a
+              href="#kontak"
+              aria-label="Instagram LAPORNAK"
+              title="Instagram LAPORNAK"
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle
+                  cx="17.6"
+                  cy="6.6"
+                  r=".8"
+                  class="icon-fill"
+                ></circle></svg
+            ></a>
+            <a href="#kontak" aria-label="X LAPORNAK" title="X LAPORNAK"
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 4h3.8L19 20h-3.8L5 4Z"></path>
+                <path d="M19 4 5 20M5 4l14 16"></path></svg
+            ></a>
+            <a
+              href="#kontak"
+              aria-label="YouTube LAPORNAK"
+              title="YouTube LAPORNAK"
+              ><svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5.5" width="18" height="13" rx="4"></rect>
+                <path class="icon-fill" d="m10 9 5 3-5 3Z"></path></svg
+            ></a>
+          </div>
+        </div>
+        <nav class="footer-column" aria-label="Menu footer">
+          <h3>Menu</h3>
+          <a href="#beranda">Beranda</a><a href="#aduanku">Aduanku</a
+          ><a href="#jelajahi">Jelajahi Aduan</a><a href="#tentang">Tentang</a>
+        </nav>
+        <nav class="footer-column" aria-label="Tautan lain">
+          <h3>Tautan Lain</h3>
+          <a href="#alur">Panduan</a
+          ><a href="#kebijakan-privasi">Kebijakan Privasi</a
+          ><a href="#faq">FAQ</a><a href="#kontak">Kontak</a>
+        </nav>
+        <div class="footer-column footer-contact">
+          <h3>Kontak Kami</h3>
+          <a href="#kontak"
+            ><svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="1.5"></rect>
+              <path d="m4 7 8 6 8-6"></path></svg
+            ><span>Alamat email resmi</span></a
+          >
+          <a href="#kontak"
+            ><svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
+              <circle cx="12" cy="12" r="4"></circle>
+              <circle cx="17.6" cy="6.6" r=".8" class="icon-fill"></circle></svg
+            ><span>@lapornak.fapet</span></a
+          >
+          <p>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20 10.2c0 5.2-8 11-8 11s-8-5.8-8-11a8 8 0 1 1 16 0Z"
+              ></path>
+              <circle cx="12" cy="10" r="2.5"></circle></svg
+            ><span>Fakultas Peternakan UGM<br />Yogyakarta</span>
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> LAPORNAK · BEM Fakultas Peternakan UGM</p>
+        <div class="footer-tagline">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <path
+              d="M23 39V23"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="2.6"
+            ></path>
+            <path
+              d="M23 28C10 27 7 18 8 10c11 0 18 6 15 18Z"
+              fill="currentColor"
+            ></path>
+            <path
+              d="M23 21C24 9 32 5 42 6c-1 11-7 18-19 19Z"
+              fill="currentColor"
+              opacity=".72"
+            ></path>
+            <path
+              d="M15 39h17"
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="2.6"
+            ></path></svg
+          ><span>Suara Mahasiswa, Lingkungan yang Lebih Baik</span>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

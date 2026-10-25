@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="description" content="Form pelaporan LAPORNAK, Pusat Laporan Mahasiswa Peternakan.">
+  <title>Buat Laporan — LAPORNAK</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/fav-icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="aduan.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html" aria-label="LAPORNAK, kembali ke beranda">
+      <img class="brand-banner" src="../assets/profile-header.svg" alt="LAPORNAK — Pusat Laporan Mahasiswa Peternakan"/>
+    </a>
+    <nav class="main-nav" aria-label="Navigasi utama">
+      <a href="../index.html">Beranda</a>
+      <a href="../index.html#aduanku">Aduanku</a>
+      <a href="../index.html#jelajahi">Jelajahi Aduan</a>
+      <a href="../index.html#tentang">Tentang</a>
+    </nav>
+    <a class="login-button" href="../index.html#kontak">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM4.5 20a7.5 7.5 0 0 1 15 0Z" fill="currentColor" stroke="none"/></svg>
+      Masuk
+    </a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="hero-decoration hero-decoration-left" aria-hidden="true"></div>
+  <div class="hero-decoration hero-decoration-right" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <a class="breadcrumb" href="../index.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 11 9-8 9 8M5.5 9.5V21h13V9.5M9.5 21v-7h5v7" /></svg> Beranda <span>›</span> <strong>Buat Laporan</strong></a>
+    <div class="hero-title-row">
+      <span class="hero-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M13 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-6M13 3v5h5M8 12h5M8 16h4M15 3l5 5M15 14l5-5 2 2-5 5-3 1Z"/></svg></span>
+      <div><p class="eyebrow">LAYANAN LAPORNAK</p><h1>Buat Laporan</h1><p class="hero-description">Sampaikan permasalahan, saran, atau aspirasi di lingkungan Fakultas Peternakan UGM.</p></div>
+    </div>
+  </div>
+</section>
+
+<main class="page-shell">
+  <form class="report-form" id="report-form" novalidate>
+    <section class="form-section" aria-labelledby="reporter-heading">
+      <div class="section-heading">
+        <span class="step-number">1</span>
+        <div><h2 id="reporter-heading">Informasi Pelapor</h2><p>Tentukan apakah kamu ingin mencantumkan identitas atau melapor secara anonim.</p></div>
+      </div>
+      <fieldset class="identity-options">
+        <legend class="sr-only">Pilihan identitas</legend>
+        <label class="identity-option selected" id="identified-option">
+          <input type="radio" name="identity-mode" value="identified" checked>
+          <span class="custom-radio"></span>
+          <span><strong>Mencantumkan Identitas</strong><small>Nama, NIM, email, dan nomor WhatsApp wajib diisi agar laporan dapat ditindaklanjuti.</small></span>
+        </label>
+        <label class="identity-option" id="anonymous-option">
+          <input type="radio" name="identity-mode" value="anonymous">
+          <span class="custom-radio"></span>
+          <span><strong>Anonim</strong><small>Semua kolom identitas disembunyikan saat kamu memilih mode anonim.</small></span>
+        </label>
+      </fieldset>
+      <div class="field-grid identity-fields" id="identity-fields">
+        <div class="field">
+          <label for="reporter-name">Nama lengkap <b class="identity-required">*</b></label>
+          <input id="reporter-name" name="reporter-name" autocomplete="name" placeholder="Masukkan nama lengkap" aria-describedby="reporter-name-error">
+          <small class="field-error" data-error-for="reporter-name" id="reporter-name-error"></small>
+        </div>
+        <div class="field">
+          <label for="reporter-nim">NIM <b class="identity-required">*</b></label>
+          <input id="reporter-nim" name="reporter-nim" autocomplete="off" placeholder="Masukkan NIM" aria-describedby="reporter-nim-error">
+          <small class="field-error" data-error-for="reporter-nim" id="reporter-nim-error"></small>
+        </div>
+        <div class="field">
+          <label for="reporter-email">Email <b class="identity-required">*</b></label>
+          <input id="reporter-email" name="reporter-email" type="email" autocomplete="email" placeholder="nama@email.com" aria-describedby="reporter-email-error">
+          <small class="field-error" data-error-for="reporter-email" id="reporter-email-error"></small>
+        </div>
+        <div class="field">
+          <label for="reporter-phone">Nomor WhatsApp <b class="identity-required">*</b></label>
+          <input id="reporter-phone" name="reporter-phone" type="tel" autocomplete="tel" placeholder="Contoh: 081234567890" aria-describedby="reporter-phone-error">
+          <small class="field-error" data-error-for="reporter-phone" id="reporter-phone-error"></small>
+        </div>
+      </div>
+      <p class="privacy-inline" id="anonymous-note" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg> Mode anonim dipilih. Pastikan uraian dan berkas yang dilampirkan tidak memuat identitas yang tidak ingin kamu bagikan.</p>
+    </section>
+
+    <section class="form-section" aria-labelledby="details-heading">
+      <div class="section-heading">
+        <span class="step-number">2</span>
+        <div><h2 id="details-heading">Informasi Laporan</h2><p>Lengkapi informasi dasar agar laporan lebih mudah dipahami.</p></div>
+      </div>
+      <div class="field-grid">
+        <div class="field"><label for="category">Kategori laporan <b>*</b></label><div class="select-wrap"><select id="category" name="category" required><option value="">Pilih kategori laporan</option><option>Fasilitas</option><option>Akademik</option><option>Pelayanan</option><option>Kebersihan</option><option>Keamanan</option><option>Saran dan Aspirasi</option><option>Lainnya</option></select><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div><small class="field-error" data-error-for="category"></small></div>
+        <div class="field"><label for="location">Lokasi kejadian <span>(opsional)</span></label><input id="location" name="location" placeholder="Contoh: Gedung A, Kelas 101"></div>
+        <div class="field full"><label for="title">Judul laporan <b>*</b></label><input id="title" name="title" maxlength="100" required placeholder="Tuliskan judul singkat dan jelas"><div class="field-meta"><small class="field-error" data-error-for="title"></small><small><span id="title-count">0</span>/100</small></div></div>
+        <div class="field"><label for="incident-date">Tanggal kejadian <span>(opsional)</span></label><input id="incident-date" name="incident-date" type="date"></div>
+        <div class="field"><label for="visibility">Visibilitas laporan <b>*</b></label><div class="select-wrap"><select id="visibility" name="visibility" required><option value="private" selected>Privat — hanya pihak berwenang</option><option value="public">Publik — dapat ditampilkan tanpa identitas</option></select><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></div><small class="field-error" data-error-for="visibility"></small><small class="contact-hint">Laporan publik tidak boleh menampilkan identitas atau data pribadi.</small></div>
+      </div>
+    </section>
+
+    <section class="form-section" aria-labelledby="description-heading">
+      <div class="section-heading">
+        <span class="step-number">3</span>
+        <div><h2 id="description-heading">Uraian Laporan</h2><p>Jelaskan permasalahan, saran, atau aspirasi secara rinci dan faktual.</p></div>
+      </div>
+      <div class="field"><label for="description">Deskripsi laporan <b>*</b></label><textarea id="description" name="description" rows="6" maxlength="3000" required placeholder="Ceritakan apa yang terjadi, kapan dan di mana kejadian berlangsung, serta tindak lanjut yang kamu harapkan."></textarea><div class="field-meta"><small class="field-error" data-error-for="description"></small><small><span id="description-count">0</span>/3000</small></div></div>
+    </section>
+
+    <section class="form-section" aria-labelledby="attachment-heading">
+      <div class="section-heading">
+        <span class="step-number">4</span>
+        <div><h2 id="attachment-heading">Bukti Pendukung <span class="optional-label">(opsional)</span></h2><p>Tambahkan foto atau dokumen yang membantu menjelaskan laporan.</p></div>
+      </div>
+      <label class="upload-zone" id="upload-zone" for="attachments">
+        <input id="attachments" name="attachments" type="file" accept=".jpg,.jpeg,.png,.pdf" multiple>
+        <span class="upload-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m-4 4 4-4 4 4M4 15v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4"/></svg></span>
+        <strong>Klik untuk memilih berkas</strong>
+        <span>atau seret dan lepaskan file di sini</span>
+        <small>JPG, PNG, PDF · Maksimal 5 file · 10 MB per file</small>
+      </label>
+      <div class="file-list" id="file-list" aria-live="polite"></div>
+      <p class="helper-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6Z"/><path d="M12 8v4m0 4h.01"/></svg> Hindari mengunggah dokumen yang berisi data pribadi orang lain kecuali memang diperlukan untuk penanganan laporan.</p>
+    </section>
+
+    <section class="form-section confirmation-section" aria-labelledby="confirmation-heading">
+      <div class="section-heading">
+        <span class="step-number">5</span>
+        <div><h2 id="confirmation-heading">Konfirmasi</h2><p>Periksa kembali informasi sebelum mengirim laporan.</p></div>
+      </div>
+      <label class="consent-check"><input type="checkbox" id="consent" name="consent" required><span>Saya menyatakan informasi yang saya berikan benar sesuai pengetahuan saya dan tidak sengaja mencantumkan data pribadi orang lain yang tidak diperlukan.</span></label>
+      <small class="field-error" data-error-for="consent"></small>
+      <div class="form-actions"><a class="secondary-button" href="../index.html">Batal</a><button class="submit-button" type="submit">Kirim Laporan <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div>
+      <p class="submission-note" id="submission-note" role="status">Form ini masih dalam tahap frontend dan belum terhubung ke sistem penyimpanan. Pengiriman belum akan menyimpan laporan.</p>
+    </section>
+  </form>
+
+  <aside class="form-sidebar">
+    <section class="side-card guidance-card">
+      <div class="side-heading"><span class="side-heading-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/></svg></span><div><h2>Sebelum Mengirim Laporan</h2><p>Pastikan laporan kamu memenuhi hal berikut:</p></div></div>
+      <ul class="guidance-list">
+        <li><span class="guidance-icon"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20l1.5-5A8.4 8.4 0 1 1 21 11.5Z"/><path d="M8.5 9.5h7m-7 4h5"/></svg></span><span>Gunakan bahasa yang sopan dan jelas.</span></li>
+        <li><span class="guidance-icon"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v5h4M9 12h7m-7 4h7"/></svg></span><span>Sampaikan informasi yang faktual dan mudah dipahami.</span></li>
+        <li><span class="guidance-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9" r="1.5"/><path d="m4 17 5-5 3 3 3-4 5 6"/></svg></span><span>Tambahkan bukti pendukung jika tersedia.</span></li>
+        <li><span class="guidance-icon"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></span><span>Jangan menyertakan data pribadi yang tidak relevan.</span></li>
+      </ul>
+    </section>
+
+    <section class="side-card category-card">
+      <div class="side-heading"><span class="side-heading-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v14H4zM2 7l10-4 10 4M8 11v7m4-7v7m4-7v7"/></svg></span><div><h2>Kategori Laporan</h2><p>Pilih kategori yang paling sesuai dengan laporan kamu.</p></div></div>
+      <ul class="category-list">
+        <li><span class="category-icon facility"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8h14v13M3 8l9-5 9 5M9 11v3m6-3v3m-6 3v4m6-4v4"/></svg></span><span><strong>Fasilitas</strong><small>Sarana dan prasarana kampus.</small></span></li>
+        <li><span class="category-icon academic"><svg viewBox="0 0 24 24"><path d="M3 5.5c3-1 6-.5 9 1.5v14c-3-2-6-2.5-9-1.5zM21 5.5c-3-1-6-.5-9 1.5v14c3-2 6-2.5 9-1.5z"/></svg></span><span><strong>Akademik</strong><small>Perkuliahan dan kegiatan akademik.</small></span></li>
+        <li><span class="category-icon service"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20v-2a6 6 0 0 1 12 0v2M17 5a3 3 0 0 1 0 6m2 3a5 5 0 0 1 2 4v2"/></svg></span><span><strong>Pelayanan</strong><small>Layanan staf, tata usaha, atau pihak terkait.</small></span></li>
+        <li><span class="category-icon clean"><svg viewBox="0 0 24 24"><path d="M20 4C10 4 5 8 5 15c0 3 2 5 5 5 7 0 10-7 10-16Z"/><path d="M3 21c3-6 7-9 12-12"/></svg></span><span><strong>Kebersihan</strong><small>Kebersihan lingkungan kampus.</small></span></li>
+        <li><span class="category-icon safety"><svg viewBox="0 0 24 24"><path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6Z"/><path d="m9 12 2 2 4-5"/></svg></span><span><strong>Keamanan</strong><small>Keamanan dan ketertiban lingkungan.</small></span></li>
+        <li><span class="category-icon ideas"><svg viewBox="0 0 24 24"><path d="M9 18h6m-5 3h4m-2-19a7 7 0 0 0-4 12.7c.7.5 1 1.1 1 2.3h6c0-1.2.3-1.8 1-2.3A7 7 0 0 0 12 2Z"/></svg></span><span><strong>Saran dan Aspirasi</strong><small>Ide, masukan, dan pengembangan.</small></span></li>
+        <li><span class="category-icon other"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/></svg></span><span><strong>Lainnya</strong><small>Kategori yang belum tercantum di atas.</small></span></li>
+      </ul>
+    </section>
+
+    <section class="privacy-card">
+      <span class="privacy-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></span>
+      <div><h2>Privasi Kamu Diperhatikan</h2><p>Kamu dapat memilih melapor secara anonim. Laporan sensitif dan identitas pelapor tidak boleh ditampilkan secara publik.</p></div>
+    </section>
+  </aside>
+</main>
+
+<footer class="page-footer"><a href="../index.html">← Kembali ke beranda LAPORNAK</a><span>© 2026 LAPORNAK · BEM Fakultas Peternakan UGM</span></footer>
+<script src="aduan.js"></script>
+</body>
+</html>
